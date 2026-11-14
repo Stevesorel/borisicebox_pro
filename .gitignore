@@ -39,3 +39,7 @@ test.*
 backend/uploads/*
 !backend/uploads/.gitkeep
 .env.production
+
+# Nuxt
+.nuxt/
+.output/
