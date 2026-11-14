@@ -29,6 +29,7 @@ app.use(helmet({
 const allowedOrigins = [
   'https://borisicebox.com',
   'https://www.borisicebox.com',
+  'https://admin.borisicebox.com',
   'http://localhost:3000',
   'http://localhost:3001',
   'http://localhost:5173',
