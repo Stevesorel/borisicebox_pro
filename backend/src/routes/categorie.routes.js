@@ -1,0 +1,11 @@
+const router = require('express').Router();
+const auth = require('../middlewares/auth');
+const { requireRoles, ALLOWED_FOR_CATALOGUE } = require('../middlewares/authorize');
+const { validateCategorie } = require('../middlewares/validate');
+const c = require('../controllers/categorie.controller');
+const cachePublic = require('../middlewares/cachePublic');
+router.get('/', cachePublic(10), c.getAll);
+router.post('/',      auth, requireRoles(...ALLOWED_FOR_CATALOGUE), validateCategorie, c.create);
+router.put('/:id',    auth, requireRoles(...ALLOWED_FOR_CATALOGUE), c.update);
+router.delete('/:id', auth, requireRoles(...ALLOWED_FOR_CATALOGUE), c.remove);
+module.exports = router;

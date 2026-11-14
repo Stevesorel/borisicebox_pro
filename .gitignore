@@ -1,0 +1,41 @@
+# Dépendances
+node_modules/
+**/node_modules/
+
+# Variables d'environnement
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+npm-debug.log*
+**/logs/
+
+# Dossiers temporaires
+temp/
+tmp/
+uploads/temp/
+.vite/
+.cache/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Fichiers de test
+test.*
+*.test.js
+
+# Scripts temporaires
+*.sh
+!setup-*.sh
+
+# Dossiers d'uploads
+backend/uploads/*
+!backend/uploads/.gitkeep
+.env.production

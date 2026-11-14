@@ -1,0 +1,84 @@
+version: '3.8'
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: boris-postgres
+    restart: always
+    environment:
+      POSTGRES_DB: boris_icebox
+      POSTGRES_USER: steve
+      POSTGRES_PASSWORD: success
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - boris-network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U steve -d boris_icebox"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  backend:
+    build:
+      context: .
+      dockerfile: docker/backend/Dockerfile
+    container_name: boris-backend
+    restart: always
+    ports:
+      - "127.0.0.1:5000:5000"
+    volumes:
+      - backend_uploads:/app/src/uploads
+    env_file:
+      - .env
+    environment:
+      - PORT=5000
+      - DB_HOST=postgres
+      - DB_PORT=5432
+      - DB_NAME=boris_icebox
+      - DB_USER=steve
+      - DB_PASS=success
+    depends_on:
+      postgres:
+        condition: service_healthy
+    networks:
+      - boris-network
+
+  frontend-shop:
+    build:
+      context: .
+      dockerfile: docker/frontend-shop-nuxt/Dockerfile
+      args:
+        NUXT_PUBLIC_API_BASE: https://api.borisicebox.com/api
+        NUXT_PUBLIC_SOCKET_BASE: https://api.borisicebox.com
+        NUXT_API_BASE_INTERNAL: http://backend:5000/api
+    container_name: boris-shop
+    restart: always
+    ports:
+      - "127.0.0.1:8082:3000"
+    depends_on:
+      - backend
+    networks:
+      - boris-network
+
+  frontend-admin:
+    build:
+      context: .
+      dockerfile: docker/frontend-admin/Dockerfile
+      args:
+        VITE_API_URL: https://api.borisicebox.com/api
+    container_name: boris-admin
+    restart: always
+    ports:
+      - "127.0.0.1:8083:80"
+    depends_on:
+      - backend
+    networks:
+      - boris-network
+
+volumes:
+  postgres_data:
+  backend_uploads:
+
+networks:
+  boris-network:
+    driver: bridge

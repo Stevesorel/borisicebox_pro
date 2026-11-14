@@ -1,0 +1,10 @@
+const router = require('express').Router();
+const auth = require('../middlewares/auth');
+const { requireRoles, ALLOWED_FOR_CATALOGUE } = require('../middlewares/authorize');
+const { validateZone } = require('../middlewares/validate');
+const c = require('../controllers/zone.controller');
+router.get('/',       c.getAll);
+router.post('/',      auth, requireRoles(...ALLOWED_FOR_CATALOGUE), validateZone, c.create);
+router.put('/:id',    auth, requireRoles(...ALLOWED_FOR_CATALOGUE), c.update);
+router.delete('/:id', auth, requireRoles(...ALLOWED_FOR_CATALOGUE), c.remove);
+module.exports = router;

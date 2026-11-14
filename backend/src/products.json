@@ -1,0 +1,158 @@
+{
+  "store_name": "Boris Ice Box",
+  "description": "Votre boutique premium au Cameroun pour smartphones, accessoires et bijoux",
+  "contact": {
+    "phone": "+237 656 771 727",
+    "email": "contact@borisicebox.com",
+    "address": "Yaounde, Cameroun"
+  },
+  "categories": [
+    {
+      "name": "Téléphones",
+      "products": [
+        {
+          "name": "iPhone 15 Pro Max",
+          "price": "850 000 FCFA",
+          "storage": ["256GB", "512GB", "1TB"],
+          "colors": ["Noir", "Bleu", "Argent", "Or"],
+          "condition": "Neuf sous garantie",
+          "features": ["A17 Pro", "USB-C", "Batterie 4422mAh", "Écran 120Hz"]
+        },
+        {
+          "name": "Samsung Galaxy S24 Ultra",
+          "price": "750 000 FCFA",
+          "storage": ["256GB", "512GB"],
+          "colors": ["Violet", "Noir", "Jaune", "Gris"],
+          "condition": "Neuf sous garantie",
+          "features": ["S Pen", "AI intégrée", "200MP caméra", "Titanium frame"]
+        },
+        {
+          "name": "Xiaomi 13T Pro",
+          "price": "450 000 FCFA",
+          "storage": ["256GB", "512GB"],
+          "colors": ["Bleu", "Noir", "Argent"],
+          "condition": "Neuf",
+          "features": ["Leica camera", "120W charging", "144Hz display"]
+        },
+        {
+          "name": "Tecno Camon 30 Premier",
+          "price": "350 000 FCFA",
+          "storage": ["256GB"],
+          "colors": ["Noir", "Or"],
+          "condition": "Neuf",
+          "features": ["Certified AI", "Portrait camera", "Batterie 5000mAh"]
+        },
+        {
+          "name": "Infinix Note 40 Pro",
+          "price": "250 000 FCFA",
+          "storage": ["256GB"],
+          "colors": ["Vert", "Noir"],
+          "condition": "Neuf",
+          "features": ["Cheetah X2", "Batterie 5000mAh", "Charge 45W"]
+        }
+      ]
+    },
+    {
+      "name": "Accessoires Téléphone",
+      "products": [
+        {
+          "name": "Chargeur rapide 65W",
+          "price": "15 000 FCFA",
+          "compatible": ["iPhone", "Samsung", "Xiaomi", "Tecno"],
+          "features": ["USB-C", "Charge rapide", "Sécurité intégrée"]
+        },
+        {
+          "name": "Coque de protection (tous modèles)",
+          "price": "5 000 - 10 000 FCFA",
+          "materials": ["Silicone", "Cuir", "Carbone"],
+          "customizable": "Oui"
+        },
+        {
+          "name": "Écran trempé verre",
+          "price": "3 000 FCFA",
+          "protection": ["Anti-rayures", "Anti-empreintes", "9H dureté"]
+        },
+        {
+          "name": "Câble USB-C haute vitesse",
+          "price": "5 000 FCFA",
+          "length": "1m-2m",
+          "features": ["Charge rapide", "Transfert données"]
+        },
+        {
+          "name": "Écouteurs Bluetooth",
+          "price": "25 000 FCFA",
+          "battery": "24h autonomie",
+          "features": ["Réduction bruit", "Charge rapide", "Bluetooth 5.3"]
+        },
+        {
+          "name": "Powerbank 20000mAh",
+          "price": "20 000 FCFA",
+          "ports": ["USB-C", "USB-A double"],
+          "features": ["Charge rapide", "Charge 3 appareils"]
+        }
+      ]
+    },
+    {
+      "name": "Bijoux & Accessoires Mode",
+      "products": [
+        {
+          "name": "Bague en argent 925",
+          "price": "35 000 - 75 000 FCFA",
+          "styles": ["Solitaire", "Éternité", "Chevalière"],
+          "finish": ["Brillant", "Mat", "Rhodiné"]
+        },
+        {
+          "name": "Collier pendentif",
+          "price": "45 000 - 120 000 FCFA",
+          "materials": ["Or 18k", "Argent", "Acier chirurgical"],
+          "pendants": ["Cœur", "Initiales", "Croix", "Étoile"]
+        },
+        {
+          "name": "Bracelet homme/femme",
+          "price": "25 000 - 85 000 FCFA",
+          "styles": ["Chaîne", "Maillons", "Cordon cuir"],
+          "personalization": "Gravure possible"
+        },
+        {
+          "name": "Boucles d'oreilles",
+          "price": "20 000 - 60 000 FCFA",
+          "types": ["Créoles", "Puces", "Longues", "Barbell"],
+          "materials": ["Or blanc", "Or jaune", "Argent"]
+        },
+        {
+          "name": "Montre classique",
+          "price": "65 000 - 150 000 FCFA",
+          "brands": ["Casio", "G-Shock", "Fossil", "Montre connectée"],
+          "features": ["Étanche", "Chronographe", "Cristal saphir"]
+        }
+      ]
+    },
+    {
+      "name": "Promotions & Offres",
+      "products": [
+        {
+          "name": "Pack iPhone + Coque + Écran",
+          "price": "880 000 FCFA",
+          "saving": "25 000 FCFA",
+          "includes": ["iPhone 15", "Coque silicone", "Verre trempé"]
+        },
+        {
+          "name": "-20% sur tout bijou > 50 000 FCFA",
+          "valid_until": "30 Juin 2026"
+        },
+        {
+          "name": "Offre étudiante",
+          "discount": "10%",
+          "condition": "Sur présentation carte étudiant",
+          "products": ["Tecno", "Infinix", "Accessoires"]
+        }
+      ]
+    }
+  ],
+  "policies": {
+    "warranty": "Garantie 6 mois sur téléphones neufs",
+    "return": "Retour possible 7 jours si produit défectueux",
+    "delivery": "Livraison gratuite Douala (24h) - 3000 FCFA autres villes",
+    "payment": ["Mobile Money", "Orange Money", "Paiement à la livraison", "Virement bancaire"]
+  }
+}
